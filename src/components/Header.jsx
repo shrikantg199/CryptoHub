@@ -19,24 +19,25 @@ export default function Header() {
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
-      className="flex justify-between gap-4 items-center bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  h-20  "
+      className="flex justify-between gap-4 items-center bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  h-16  "
     >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
-          <p className="font-bold text-inherit text-2xl text-white font-serif">
-            <div className="flex justify-center items-center">
-              {" "}
-              <img src={img} alt="" className="h-18 w-16 m-2" />
-              CryptoHub
-            </div>
-          </p>
-        </NavbarBrand>
+        <Link href="/">
+          <NavbarBrand>
+            <p className="font-bold text-inherit text-2xl text-white font-serif">
+              <div className="flex justify-center items-center">
+                {" "}
+                <img src={img} alt="" className="h-18 w-16 m-2" />
+                CryptoHub
+              </div>
+            </p>
+          </NavbarBrand>
+        </Link>
       </NavbarContent>
-
       <NavbarContent className="hidden sm:flex gap-4 " justify="center">
         <Input
           type="Coin Search"
