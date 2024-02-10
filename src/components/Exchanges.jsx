@@ -18,12 +18,12 @@ function Exchange() {
         setLoading(false);
       } catch (error) {
         console.error("Error fetching exchanges:", error);
-        setLoading(false); // Set loading to false in case of an error
+        setLoading(false);
       }
     };
 
     fetchExchangesData();
-  }, []); // Added empty dependency array to ensure useEffect runs only once
+  }, []);
 
   return (
     <>
@@ -39,7 +39,7 @@ function Exchange() {
           <div className="flex justify-center ">
             <div className="lg:m-2 mb-3 ">
               {" "}
-              <ul className=" bg-white w-96 lg:w-[120vh] h-16   lg:h-32 rounded-2xl shadow-md  hover:shadow-blue-500 ">
+              <ul className=" bg-white w-80 lg:w-[120vh] h-16   lg:h-32 rounded-2xl shadow-md  hover:shadow-blue-500 ">
                 <Link to={item.url}>
                   <li
                     key={index}
@@ -50,7 +50,9 @@ function Exchange() {
                       className="h-12 p-1  lg:w-28 lg:h-28 lg:p-3 "
                       alt=""
                     />
-                    <h2 className="text-xl w-20 lg:w-5">{item.name}</h2>
+                    <h2 className="text-xl w-20 lg:w-5">
+                      {item.name.slice(0, 8)}
+                    </h2>
                     <h2 className="text-xl hidden lg:block  w-5">
                       {item.country}
                     </h2>
