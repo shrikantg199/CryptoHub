@@ -38,7 +38,7 @@ export default function Header() {
           </NavbarBrand>
         </Link>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex gap-4 " justify="center">
+      <NavbarContent className="hidden sm:flex gap-12 " justify="center">
         <Input
           type="Coin Search"
           label="Coin Search"
@@ -57,6 +57,24 @@ export default function Header() {
             className="text-2xl text-white "
           >
             Coins
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            color="foreground"
+            href="/coin"
+            className="text-2xl text-white "
+          >
+            News
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            color="foreground"
+            href="/coin"
+            className="text-2xl text-white "
+          >
+            Trending
           </Link>
         </NavbarItem>
       </NavbarContent>
