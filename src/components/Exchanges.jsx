@@ -13,7 +13,7 @@ function Exchange() {
     const fetchExchangesData = async () => {
       try {
         const response = await axios.get(`${BaseUrl}/exchanges`);
-        console.log(response);
+
         setExchanges(response.data);
         setLoading(false);
       } catch (error) {
@@ -39,7 +39,7 @@ function Exchange() {
           <div className="flex justify-center ">
             <div className="lg:m-2 mb-3 ">
               {" "}
-              <ul className=" bg-white w-80 lg:w-[120vh] h-16   lg:h-32 rounded-2xl shadow-md  hover:shadow-blue-500 ">
+              <ul className=" bg-white w-80 lg:w-[120vh] h-14   lg:h-28 rounded-2xl shadow-md  hover:shadow-blue-500 ">
                 <Link to={item.url}>
                   <li
                     key={index}
