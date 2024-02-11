@@ -16,7 +16,7 @@ function Coin() {
         const response = await axios.get(
           `${BaseUrl}/coins/markets?vs_currency=${currency}`
         );
-        console.log(response.data);
+
         setCoins(response.data);
 
         setLoading(false);
@@ -62,6 +62,7 @@ function Coin() {
 
           {coins.map((item, index) => (
             <CoinCard
+              key={index}
               id={item.id}
               image={item.image}
               currencySymbol={currencySymbol}
