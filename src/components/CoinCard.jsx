@@ -8,7 +8,7 @@ function CoinCard({ id, image, name, currencySymbol, price, cap }) {
       <div className="flex justify-center ">
         <div className="lg:m-2 mb-3 ">
           {" "}
-          <ul className=" bg-white/95 w-[360px]  lg:w-[90vh] h-20   lg:h-32 rounded-2xl shadow-md  hover:shadow-blue-500 ">
+          <ul className=" bg-white/95 w-[320px]  lg:w-[90vh] h-20   lg:h-28 rounded-2xl shadow-md  hover:shadow-blue-500 ">
             <li className="flex justify-between items-center ">
               <img
                 src={image}
@@ -21,11 +21,11 @@ function CoinCard({ id, image, name, currencySymbol, price, cap }) {
                 {price}
               </h2>
               <h2
-                className={` m-6 lg:m-9 text-xl w-8  font-semibold ${
+                className={` m-6 lg:m-12 text-xl w-8  font-semibold ${
                   profit ? "text-green-600" : "text-red-500"
                 }`}
               >
-                {profit ? "+" + cap : cap}
+                {profit ? "+" + cap : cap}%
               </h2>
             </li>
           </ul>
