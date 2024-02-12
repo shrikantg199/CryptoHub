@@ -62,7 +62,6 @@ function CoinChartData({ img, price }) {
         data: chartData.map((value) => value[1] / 1000),
         borderColor: "#16c784",
         borderWidth: "2.5",
-
         stack: "line",
         tension: 0,
       },
@@ -80,12 +79,17 @@ function CoinChartData({ img, price }) {
         grid: {
           display: false,
         },
+        ticks: {
+          color: "white",
+        },
       },
       y: {
         grid: {
           display: false,
         },
+
         ticks: {
+          color: "white",
           callback: function (value, index, values) {
             return value.toFixed(2) + "k";
           },
@@ -112,8 +116,8 @@ function CoinChartData({ img, price }) {
       {loading ? (
         <GraphLoader />
       ) : (
-        <div className=" ">
-          <div className="flex justify-center gap-2 m-3">
+        <div className="  ">
+          <div className="flex justify-center gap-2 m-3 ">
             <img src={img} className="h-10 w-10 lg:w-10 lg:h-10   " alt="" />
             <h2 className="text-center text-3xl">{id.toUpperCase()}</h2>
           </div>
