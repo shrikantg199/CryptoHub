@@ -21,7 +21,7 @@ function CoinCard({ id, image, name, currencySymbol, price, cap }) {
                 {price}
               </h2>
               <h2
-                className={` m-6 lg:m-12 text-xl w-8  font-semibold ${
+                className={` mr-12 lg:m-12 text-xl w-8  font-semibold ${
                   profit ? "text-green-600" : "text-red-500"
                 }`}
               >
