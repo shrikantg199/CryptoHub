@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -13,7 +13,12 @@ import img from "../assets/logo.png";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["Home", "coins", "Trending"];
+  const menuItems = [
+    { name: "Home", Link: "/" },
+    { name: "Coins", Link: "/coins" },
+    { name: "News", Link: "/news" },
+    { name: "Trending", Link: "/trending" },
+  ];
 
   return (
     <Navbar
@@ -87,8 +92,8 @@ export default function Header() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className="w-full text-black m-3" href="/coin" size="lg">
-              {item}
+            <Link className="w-full text-black m-3" href={item.Link} size="lg">
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
