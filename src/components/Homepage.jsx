@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaLongArrowAltRight } from "react-icons/fa";
-
+import logo from "../assets/logo.png";
 function Homepage() {
   return (
     <div className="text-white text-center flex flex-col items-center justify-center h-screen">
@@ -14,6 +14,7 @@ function Homepage() {
           Crypto Your Gateway to Digital Prosperity
         </h1>
       </div>
+
       <div className="flex justify-center ">
         <h1 className="text-2xl w-[60%]">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe vitae
