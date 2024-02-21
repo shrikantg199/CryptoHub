@@ -17,9 +17,10 @@ function Homepage() {
 
       <div className="flex justify-center ">
         <h1 className="text-2xl w-[60%]">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe vitae
-          quod, in libero exercitationem voluptatum delectus suscipit officiis
-          aliquam nesciunt?
+          Welcome to our Cryptocurrency Web App, your gateway to the exciting
+          world of digital currencies! Our application provides a user-friendly
+          interface to explore, analyze, and stay informed about the dynamic
+          cryptocurrency market.
         </h1>
       </div>
       <div className="m-12 hover:scale-110 transition-all">
